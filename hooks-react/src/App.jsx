@@ -1,13 +1,24 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Navbar from './components/Navbar'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [color, setcolor] = useState(0)
+
+  // Runs for specific state
+  useEffect(() => {
+    alert("count was changed")
+  }, [count])
+  
+  
+  
 
   return (
     <>
+      <Navbar color={"navy "+"blue"}/>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
